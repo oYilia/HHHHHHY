@@ -1,13 +1,18 @@
-import { Selector } from 'testcafe';
-
-fixture `Getting Started`
-    .page `http://devexpress.github.io/testcafe/example`;
-
-test('My first test', async t => {
-    await t
-        .typeText('#developer-name', 'John Smith')
-        .click('#submit-button')
-
-        // Use the assertion to check if the actual header text is equal to the expected one
-        .expect(Selector('#article-header').innerText).eql('Thank you, John Smith!');
-});
+const account = {
+    Chris_sandbox: [
+      {
+        name: 'Yilia Hong',
+        password: 'Test!123',
+        extension: '122',
+        phoneNumber: '18662032065'
+      },
+      {
+        name: 'glip dev xia chris sandbox',
+        password: 'Test!123',
+        extension: '101',
+        phoneNumber: '18662032065'
+      }
+    ]
+  };
+  
+  export default account;
