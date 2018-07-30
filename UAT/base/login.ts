@@ -1,5 +1,5 @@
 import { Role, Selector } from 'testcafe';
-import account from './info';
+import account from './account';
 
 interface IAccount {
   name: string;

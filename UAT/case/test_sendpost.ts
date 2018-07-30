@@ -1,23 +1,18 @@
 import { Selector } from 'testcafe';
+import account from '../base/account';
 
 fixture `fiji`
-    .page `https://develop.fiji.gliprc.com/unified-login`;
+    .page `https://develop.fiji.gliprc.com/unified-login`.beforeEach(async t => {
+        const role = account['chris sandbox']['Yilia Hong'];
+        await t.useRole(role);
+    });
 
 test('send post', async t => {
     await t
-    /*
-        .click(Selector('div').withText('Environment').nth(4).find('select'))
-        .click(Selector('option').withText('Chris'))
-        .typeText(Selector('#credential'), '8662032065')
-        .click(Selector('#credential'))
-        .pressKey('enter')
-        .typeText(Selector('#pin'), '122')
-        .typeText(Selector('#password'), 'Test!123')
-        .click(Selector('button').withText('Sign In'))
-    */
         .click(Selector('p').withText('Team RingCentral Inc'))
         .typeText(Selector('.sc-hrWEMg.hDUqxD').find('div').find('div').find('textarea'), 'Test')
         .pressKey('enter')
+        /*
         .click(Selector('.sc-eHgmQL.iKsPTa'))
         .typeText(Selector('.sc-jAaTju.cqxjqq'), 'abc')
         .click(Selector('.Select-placeholder'))
@@ -41,4 +36,5 @@ test('send post', async t => {
         .click(Selector('.sc-kpOJdX.gSghLr'))
         .typeText(Selector('.sc-hrWEMg.hDUqxD').find('div').find('div').find('textarea'), 'hello')
         .click(Selector('p').withText('bb'));
+        */
 });
