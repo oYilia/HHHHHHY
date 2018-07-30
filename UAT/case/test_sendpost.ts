@@ -3,24 +3,9 @@ import { Selector } from 'testcafe';
 fixture `fiji`
     .page `https://develop.fiji.gliprc.com/unified-login`;
 
-test('Login', async t => {
+test('send post', async t => {
     await t
-        .maximizeWindow()
-        .click(Selector('div').withText('Environment').nth(4).find('select'))
-        .click(Selector('option').withText('Chris'))
-        .click(Selector('button').withText('Login'))
-        .typeText(Selector('#credential'), '8662032065')
-        .click(Selector('#loginCredentialNext'))
-        .typeText(Selector('#pin'), '122')
-        .typeText(Selector('#password'), 'Test！123')
-        .click(Selector('button').withText('Sign In'))
-        .click(Selector('p').withText('Yilia Hong'))
-        .typeText(Selector('.sc-hrWEMg.hDUqxD').find('div').find('div').find('textarea'), 'Test')
-        .pressKey('');
-});
-
-test('New Test', async t => {
-    await t
+    /*
         .click(Selector('div').withText('Environment').nth(4).find('select'))
         .click(Selector('option').withText('Chris'))
         .typeText(Selector('#credential'), '8662032065')
@@ -29,8 +14,10 @@ test('New Test', async t => {
         .typeText(Selector('#pin'), '122')
         .typeText(Selector('#password'), 'Test!123')
         .click(Selector('button').withText('Sign In'))
+    */
         .click(Selector('p').withText('Team RingCentral Inc'))
         .typeText(Selector('.sc-hrWEMg.hDUqxD').find('div').find('div').find('textarea'), 'Test')
+        .pressKey('enter')
         .click(Selector('.sc-eHgmQL.iKsPTa'))
         .typeText(Selector('.sc-jAaTju.cqxjqq'), 'abc')
         .click(Selector('.Select-placeholder'))
