@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "test_sendpost": "testcafe chrome UAT/case/test_sendpost.ts"
+    
+  },
   "dependencies": {
     "testcafe": "^0.20.5"
   }
