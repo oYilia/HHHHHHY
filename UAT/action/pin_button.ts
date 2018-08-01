@@ -3,11 +3,11 @@ import MainPage from '../page/main_page';
 
 const mainpage = new MainPage();
 
-async function LikeButton() {
+async function PinButton() {
     await t
     .hover(mainpage.postTimeArea)
-    .click(mainpage.likeButton)
-    .expect(mainpage.likeButton.exists);
+    .click(mainpage.pinButton)
+    .expect(mainpage.unpinButton.exists);
 }
 
-export { LikeButton };
+export { PinButton };

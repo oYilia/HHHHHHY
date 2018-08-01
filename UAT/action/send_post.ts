@@ -8,6 +8,7 @@ async function SendText(text:string) {
         .click(Selector('p').withText('Team RingCentral Inc'))
         .typeText(mainpage.postTextarea, text)
         .pressKey('enter')
+        .expect(mainpage.postArea.exists);
 }
 
 export {SendText};

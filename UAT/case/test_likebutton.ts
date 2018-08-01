@@ -1,7 +1,7 @@
 import { t,Selector } from 'testcafe';
 import account from '../base/account';
 import roles from '../base/login';
-import { like_button } from '../action/Like_button';
+import { LikeButton } from '../action/like_button';
 
 fixture `like_button`
     .page `https://develop.fiji.gliprc.com/unified-login`.beforeEach(async t=> {
@@ -9,6 +9,6 @@ fixture `like_button`
     await t.useRole(role);
 });
 
-test('likebutton', async t => {
-    like_button();
+test('like button', async t => {
+    LikeButton();
 });
