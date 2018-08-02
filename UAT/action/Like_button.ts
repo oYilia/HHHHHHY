@@ -6,6 +6,7 @@ const mainpage = new MainPage();
 async function LikeButton() {
     await t
     .hover(mainpage.postTimeArea)
+    //wait
     .click(mainpage.likeButton)
     .expect(mainpage.likeButton.exists);
 }

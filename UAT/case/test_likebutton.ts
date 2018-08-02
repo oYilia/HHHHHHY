@@ -10,5 +10,5 @@ fixture `like_button`
 });
 
 test('like button', async t => {
-    LikeButton();
+    await LikeButton();
 });

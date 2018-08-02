@@ -10,5 +10,5 @@ fixture `pin_button`
     });
 
 test('pin button',async t => {
-    PinButton();
+    await PinButton();
 });

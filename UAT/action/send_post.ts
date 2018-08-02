@@ -5,10 +5,11 @@ const mainpage = new MainPage();
 
 async function SendText(text:string) {
     await t
+        .debug()
         .click(Selector('p').withText('Team RingCentral Inc'))
-        .typeText(mainpage.postTextarea, text)
+        .typeText(mainpage.postTextarea, text + Date.now())
         .pressKey('enter')
-        .expect(mainpage.postArea.exists);
+        .expect(mainpage.postArea).contains(text + Date.now());
 }
 
-export {SendText};
+export { SendText };
