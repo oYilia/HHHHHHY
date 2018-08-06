@@ -32,10 +32,10 @@ export default class Main {
     this.createTeamButton = Selector('div').withText('Teams').nth(8).nth(8).find('span').nth(1);
     this.createTeamDialog = Selector('.Modal');
 
-    this.postArea = Selector('.sc-elJkPf duwGEi').find('div');
+    this.postArea = Selector('.sc-elJkPf.duwGEi').find('div');
     this.postTextarea = Selector('textarea');
-    this.uploadButton = Selector('#upload-button');
-    this.postTimeArea = Selector('.sc-dNLxif dYsDxb').find('div');
+    this.uploadButton = Selector('.sc-RefOD.fiNdDG').withText('upload');
+    this.postTimeArea = Selector('.sc-dNLxif.dYsDxb').find('div');
     this.likeButton = Selector('.sc-ktHwxA.kHYEVW').nth(27).find('span').withText('Like');
     this.unlikeButton = Selector('.sc-ktHwxA.kHYEVW').nth(27).find('span').withText('Unlike');
     this.pinButton = (Selector('.sc-iELTvK.czjhkS').nth(27).find('span').withText('Pin'));

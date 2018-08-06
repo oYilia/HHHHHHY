@@ -1,5 +1,4 @@
 import { Selector } from 'testcafe';
-import account from '../base/account';
 import roles  from '../base/login'
 import { SendText } from '../action/send_post'
 
@@ -10,10 +9,5 @@ fixture `send_post`
     });
 
 test('send post', async() => {
-    await SendText( "test" );
+    await SendText("Team RingCentral Inc.", "test" );
 });
-/*
-test('at mention', async(t) => {
-    await SendText("@");
-});
-*/

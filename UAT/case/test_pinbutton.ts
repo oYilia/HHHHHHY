@@ -1,5 +1,4 @@
 import { t, Selector } from 'testcafe';
-import account from '../base/account';
 import roles from '../base/login';
 import { PinButton } from '../action/pin_button';
 

@@ -1,18 +1,25 @@
-import { t,Selector } from 'testcafe';
+import { t } from 'testcafe';
 import MainPage from '../page/main_page';
 
 const mainpage = new MainPage();
 
-async function SendText(text:string) {
+async function SendText(teamName:string,text:string) {
+    var textPost = text + Date.now();
     await t
         .debug()
-        .click(Selector('p').withText('Team RingCentral Inc'))
-        .typeText(mainpage.postTextarea, text + Date.now())
+        .click(mainpage.groupSelect.withText(teamName))
+        .typeText(mainpage.postTextarea, textPost)
         .pressKey('enter')
-        .expect(mainpage.postArea).contains(text + Date.now());
+        .expect(mainpage.postArea.innerText).contains(textPost);
 }
 
-async function SendImage(){
-    
+async function SendImage(teamName:string){
+    await t
+        .wait(100)
+        .click(mainpage.groupSelect.withText(teamName))
+        .click(mainpage.uploadButton)
+        .setFilesToUpload(mainpage.postTextarea,'./uploads/1.jpg')
+
 }
-export { SendText };
+
+export { SendText,SendImage };
