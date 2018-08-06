@@ -1,4 +1,4 @@
-import { SendImage } from '../action/send_post';
+import { SendFile } from '../action/send_post';
 import roles from '../base/login';
 
 fixture`send_image` 
@@ -8,5 +8,5 @@ fixture`send_image`
 });
 
 test('send file',async () => {
-    await SendImage("Team RingCentral Inc.",)
+    await SendFile("Team RingCentral Inc.",)
 });

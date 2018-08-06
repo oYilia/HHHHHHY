@@ -9,5 +9,5 @@ fixture `send_post`
     });
 
 test('send post', async() => {
-    await SendText("Team RingCentral Inc.", "test" );
+    await SendText("Team RingCentral Inc.", "" );
 });

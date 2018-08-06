@@ -34,7 +34,7 @@ export default class Main {
 
     this.postArea = Selector('.sc-elJkPf.duwGEi').find('div');
     this.postTextarea = Selector('textarea');
-    this.uploadButton = Selector('.sc-RefOD.fiNdDG').withText('upload');
+    this.uploadButton = Selector('.sc-iQKALj.fQoUzh',{visibilityCheck:true});
     this.postTimeArea = Selector('.sc-dNLxif.dYsDxb').find('div');
     this.likeButton = Selector('.sc-ktHwxA.kHYEVW').nth(27).find('span').withText('Like');
     this.unlikeButton = Selector('.sc-ktHwxA.kHYEVW').nth(27).find('span').withText('Unlike');
