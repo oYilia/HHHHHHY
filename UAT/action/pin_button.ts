@@ -1,4 +1,4 @@
-import { t,Selector } from 'testcafe';
+import { t } from 'testcafe';
 import MainPage from '../page/main_page';
 
 const mainpage = new MainPage();
@@ -6,7 +6,7 @@ const mainpage = new MainPage();
 async function PinButton() {
     await t
     .hover(mainpage.postTimeArea)
-    //wait
+    //.wait(mainpage.pinButton.exists)//isvisible
     .click(mainpage.pinButton)
     .expect(mainpage.unpinButton.exists);
 }

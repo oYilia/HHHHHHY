@@ -12,4 +12,7 @@ async function SendText(text:string) {
         .expect(mainpage.postArea).contains(text + Date.now());
 }
 
+async function SendImage(){
+    
+}
 export { SendText };

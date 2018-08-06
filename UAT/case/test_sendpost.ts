@@ -9,6 +9,11 @@ fixture `send_post`
         await t.useRole(role);
     });
 
-test('send post', async(t) => {
+test('send post', async() => {
     await SendText( "test" );
-}); 
+});
+/*
+test('at mention', async(t) => {
+    await SendText("@");
+});
+*/
