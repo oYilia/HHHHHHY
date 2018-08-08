@@ -10,6 +10,7 @@ export default class Main {
   createTeamDialog: Selector;
 
   postArea: Selector;
+  lastPost: Selector;
   postTextarea: Selector;
   uploadButton: Selector;
   postTimeArea: Selector;
@@ -33,15 +34,16 @@ export default class Main {
     this.createTeamDialog = Selector('.Modal');
 
     this.postArea = Selector('.sc-elJkPf.duwGEi').find('div');
+    this.lastPost = Selector('.sc-elJkPf > div > div:last-child');
     this.postTextarea = Selector('textarea');
-    this.uploadButton = Selector('.sc-iQKALj.fQoUzh',{visibilityCheck:true});
+    this.uploadButton = Selector('.sc-iQKALj.fQoUzh');
     this.postTimeArea = Selector('.sc-dNLxif.dYsDxb').find('div');
-    this.likeButton = Selector('.sc-ktHwxA.kHYEVW').nth(27).find('span').withText('Like');
-    this.unlikeButton = Selector('.sc-ktHwxA.kHYEVW').nth(27).find('span').withText('Unlike');
-    this.pinButton = (Selector('.sc-iELTvK.czjhkS').nth(27).find('span').withText('Pin'));
-    this.unpinButton = (Selector('.sc-iELTvK.czjhkS').nth(27).find('span').withText('Unpin'));
-    this.bookmarkButton = (Selector('.sc-jwKygS.gTZXhi').nth(27).find('span').withText('Bookmark'));
-    this.removebookmarkButton = (Selector('.sc-jwKygS.gTZXhi').nth(27).find('span').withText('Remove Bookmark'));
+    this.likeButton = Selector('.sc-ktHwxA.kHYEVW').find('span').withText('Like');
+    this.unlikeButton = Selector('.sc-ktHwxA.kHYEVW').find('span').withText('Unlike');
+    this.pinButton = Selector('.sc-iELTvK.czjhkS').find('span').withText('Pin');
+    this.unpinButton = Selector('.sc-iELTvK.czjhkS').find('span').withText('Unpin');
+    this.bookmarkButton = Selector('.sc-jwKygS.gTZXhi').find('span').withText('Bookmark');
+    this.removebookmarkButton = (Selector('.sc-jwKygS.gTZXhi').find('span').withText('Remove Bookmark'));
 
     this.addMemberButton = Selector('.memberList').find('i');
     this.addMemberDialog = Selector('.Modal');

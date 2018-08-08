@@ -20,7 +20,7 @@ function getUsers(account: IAccounts) {
     users[env] = account[env].reduce((roles: IRoles, user: IAccount) => {
       const { name, phoneNumber, password, extension } = user;
       roles[name] = Role(
-        'https://develop.fiji.gliprc.com/unified-login',
+        'https://develop.fiji.gliprc.com',
         async t => {
           const envSelect = Selector('div').withText('Environment').nth(4).find('select');
           const envSelectOption = envSelect.find('option');

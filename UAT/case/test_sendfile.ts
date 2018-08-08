@@ -2,7 +2,7 @@ import { SendFile } from '../action/send_post';
 import roles from '../base/login';
 
 fixture`send_image` 
-    .page`https://develop.fiji.gliprc.com/unified-login` .beforeEach(async t => {
+    .page`https://feature-fiji-633.fiji.gliprc.com` .beforeEach(async t => {
         const role = roles ['Chris_sandbox']['Yilia Hong'];
         await t.useRole(role);
 });

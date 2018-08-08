@@ -6,7 +6,7 @@ const mainpage = new MainPage();
 async function PinButton() {
     await t
     .hover(mainpage.postTimeArea)
-    //.wait(mainpage.pinButton.exists)//isvisible
+    .wait(1000)//isvisible
     .click(mainpage.pinButton)
     .expect(mainpage.unpinButton.exists);
 }

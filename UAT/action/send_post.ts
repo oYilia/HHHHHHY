@@ -15,10 +15,11 @@ async function SendText (teamName:string,text:string) {
 
 async function SendFile (teamName:string){
     await t
-        .wait(100)
+        .wait(1000)
         .click(mainpage.groupSelect.withText(teamName))
-        .setFilesToUpload('#upload-input','./uploads/1.jpg')
-        .click(mainpage.uploadButton)
+        .setFilesToUpload(mainpage.uploadButton,'../data/1.jpg')
+        .wait(3000)
+        .expect(mainpage.lastPost.innerText).contains('1.jpg');
 }
 
 async function AtMention (teamName:string,firstName:string) {

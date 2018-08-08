@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "protocol": "inspector",
+            "name": "Debug",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/testcafe/bin/testcafe.js",
+            "args": [
+                "chrome",
+                "${workspaceFolder}/UAT/case/test_likebutton.ts"
+            ],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
