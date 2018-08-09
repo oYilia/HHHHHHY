@@ -8,7 +8,7 @@ async function LoadHistory(teamName:string) {
     await t
         .debug()
         .click(mainpage.groupSelect.withText(teamName))
-        for(var i=0;i<10;i++){ //
+        for(var i=0;i<100;i++){ //
             await t.pressKey('up')
         }
 
