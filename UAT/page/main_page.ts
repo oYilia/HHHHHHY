@@ -11,6 +11,7 @@ export default class Main {
 
   postArea: Selector;
   lastPost: Selector;
+  firstPost: Selector;
   postTextarea: Selector;
   uploadButton: Selector;
   postTimeArea: Selector;
@@ -35,6 +36,7 @@ export default class Main {
 
     this.postArea = Selector('.sc-elJkPf.duwGEi').find('div');
     this.lastPost = Selector('.sc-elJkPf > div > div:last-child');
+    this.firstPost = Selector('.sc-elJkPf > div > div:first-child');
     this.postTextarea = Selector('textarea');
     this.uploadButton = Selector('.sc-iQKALj.fQoUzh');
     this.postTimeArea = Selector('.sc-dNLxif.dYsDxb').find('div');

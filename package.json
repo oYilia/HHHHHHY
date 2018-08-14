@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "testsendpost": "testcafe chrome UAT/case/test_sendpost.ts",
-    "testsendfile": "testcafe chrome UAT/case/test_sendfile.ts"
+    "sendpost": "testcafe chrome UAT/case/test_sendpost.ts",
+    "sendfile": "testcafe chrome UAT/case/test_sendfile.ts",
+    "atmention": "testcafe chrome UAT/case/test_atmention.ts",
+    "loadhistory": "testcafe chrome UAT/case/test_loadhistory.ts"
   },
   "dependencies": {
     "testcafe": "^0.20.5"
